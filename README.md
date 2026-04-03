@@ -2,6 +2,25 @@
 
 Examples for calling Anthropic Claude models on AWS Bedrock from Jupyter notebooks.
 
+## Repository structure
+
+The notebooks are currently organized into three sections:
+
+- `01_working_api/`
+  - `001_request/`: basic Bedrock API requests
+  - `002_system_promtps/`: system message examples
+  - `003_streaming/`: streaming responses
+  - `004_controlling_out/`: output control examples
+- `02_prompt_evaluation/`
+  - `001_Prompt_Evals.ipynb`
+  - `001_Prompt_Evals_complete.ipynb`
+- `03_prompt_engineering/`
+  - `001_prompting.ipynb`
+  - `002_prompting_completed.ipynb`
+  - `dataset.json`
+
+Most topics include both an in-progress notebook and a completed notebook.
+
 ## Requirements
 
 - Python 3
@@ -54,13 +73,13 @@ export AWS_SESSION_TOKEN=<your-session-token>
 
 Option 3, use a local `.env` file:
 
-1. Create a `.env` file from the example:
+1. Copy the example file:
 
 ```bash
 cp .env.example .env
 ```
 
-2. Fill in your AWS values:
+2. Update `.env` with your AWS credentials:
 
 ```env
 AWS_ACCESS_KEY_ID=your_access_key_id
