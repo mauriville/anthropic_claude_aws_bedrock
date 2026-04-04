@@ -126,6 +126,17 @@ When Jupyter opens, select the `.venv` kernel for the notebooks.
 - `OPENAI_API_KEY` is only needed for the notebooks in `00_basic_doc_examples/` that instantiate `OpenAI()`.
 - The Bedrock examples in this repository are configured for `us-west-2`. Make sure your AWS access and model availability are enabled in that region.
 
+## Estimated cost
+
+Running these notebooks requires paid API usage when they make requests to Amazon Bedrock or the OpenAI API.
+
+- Running a few basic demo notebooks one time is usually inexpensive, often in the cents to low single-digit dollar range.
+- Running the full repository once with the current defaults is more likely to land in the low single-digit dollars, and can reach roughly `$3` to `$12` depending on response length and how many notebooks you execute.
+- The biggest cost drivers are the evaluation and prompt-engineering notebooks because they generate datasets and run multiple grading calls.
+- In particular, increasing values like `num_cases`, rerunning notebooks several times, or allowing longer model outputs can increase cost quickly.
+
+If you want to minimize spend, start with the basic examples, keep generated outputs short, and use small evaluation datasets before scaling up.
+
 ## Notes
 
 - Do not commit your real `.env` file. This repository ignores it through `.gitignore`.
